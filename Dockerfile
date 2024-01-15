@@ -8,5 +8,5 @@ WORKDIR /opt/homework12/
 RUN git clone https://github.com/nickwokeupinseoul/app42.git
 WORKDIR /opt/homework12/app42
 RUN mvn clean package
-RUN mv /opt/homework/app42/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps
+RUN mv /opt/homework12/app42/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps
 ADD ./Config.properties /usr/local/tomcat/ROOT/
