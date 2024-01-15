@@ -4,6 +4,7 @@ RUN ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 RUN apt install -y git -y
 RUN apt install default-jdk -y
 RUN apt install maven -y 
+RUN apt install wget -y
 WORKDIR /opt/
 RUN git clone https://github.com/nickwokeupinseoul/app42.git
 WORKDIR /opt/app42
