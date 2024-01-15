@@ -14,4 +14,5 @@ RUN wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.98/bin/apache-tomcat-8.5
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-8.5.98/* /usr/local/tomcat/
 CMD /usr/local/tomcat/bin/catalina.sh run
+WORKDIR /usr/local/tomcat/webapps
 RUN mv /opt/app42/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps
