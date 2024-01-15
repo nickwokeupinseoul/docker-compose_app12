@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
 RUN apt update
+RUN ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 RUN apt install -y git -y
 RUN apt install default-jdk -y
 RUN apt install tomcat9 -y
