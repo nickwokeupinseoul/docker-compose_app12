@@ -12,9 +12,11 @@ services:
     # Ключевое слово 'depends_on' позволяет указывать, должен ли сервис,
     # прежде чем запуститься, ждать, когда будут готовы к работе другие сервисы.
     # Нам нужно, чтобы сервис 'application' дождался бы готовности к работе сервиса 'db'.
+    volumes:
+    - 'artifact:/usr/local/tomcat/webapps/'
     depends_on:
       - db
-    environment:
+
       
   db:
     image: mysql:latest
