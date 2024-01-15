@@ -16,4 +16,3 @@ RUN cp -Rv /tmp/apache-tomcat-8.5.98/* /usr/local/tomcat/
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
 RUN mv /opt/app42/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps
-ADD /opt/app42/Config.properties /usr/local/tomcat/webapps/ROOT/
