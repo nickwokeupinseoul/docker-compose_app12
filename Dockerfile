@@ -17,3 +17,4 @@ EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
 RUN mv /opt/app42/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps
 ADD ./Config.properties /usr/local/tomcat/webapps/ROOT/
+WORKDIR /usr/local/tomcat/webapps/
