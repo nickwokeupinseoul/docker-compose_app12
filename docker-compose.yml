@@ -28,3 +28,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: Aa123456
       MYSQL_DATABASE: mydb
+
+volumes:
+  artifact:
