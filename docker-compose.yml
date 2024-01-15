@@ -11,6 +11,18 @@ services:
       - 1234:1234
     # Ключевое слово 'depends_on' позволяет указывать, должен ли сервис,
     # прежде чем запуститься, ждать, когда будут готовы к работе другие сервисы.
-    # Нам нужно, чтобы сервис 'app' дождался бы готовности к работе сервиса 'db'.
+    # Нам нужно, чтобы сервис 'application' дождался бы готовности к работе сервиса 'db'.
     depends_on:
       - db
+    environment:
+      
+  db:
+    image: mysql:latest
+    environment:
+    # NOTE: use of "mysql_native_password" is not recommended: https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
+    # (this is just an example, not intended to be a production configuration)
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Aa123456
+      MYSQL_DATABASE: mydb
