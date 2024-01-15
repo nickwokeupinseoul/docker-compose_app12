@@ -5,7 +5,9 @@ version: "3"
 services:
   application:
     #build задает путь к dockerfile  
-    build: ./
+    build:
+        context: /opt/homework/docker-compose_app12/
+        dockerfile: Dockerfile
     #перенаправление порта на порт сервера
     restart: always
     ports:
